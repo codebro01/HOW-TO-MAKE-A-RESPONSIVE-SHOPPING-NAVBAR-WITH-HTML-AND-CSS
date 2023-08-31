@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to make a shopping navbar with HTML and CSS (Css tutorial for beginners)</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="navbar">
+        <nav>
+            <div class="logo"><a href="#">WEst Shop</a></div>
+            <ul class="nav-links">
+                <li class="nav-link"><a href="#">Home</a></li>
+                <li class="nav-link"><a href="#">About us</a></li>
+                <li class="nav-link"><a href="#">Portfolio</a></li>
+                <li class="nav-link"><a href="#">Pricing</a></li>
+                <li class="nav-link"><a href="#">Contact</a></li>
+                <div class="signup">
+                    <a href="#">Sign up</a>
+                </div>
+            </ul>
+            <form action="#" class="search">
+                <input type="search" id="search" placeholder="search" required autocomplete="off">
+                <button type="submit" value=""><i class='bx bx-right-arrow-alt'></i></button>
+            </form>
+            <div class="menu-togglers">
+                <i class='bx bx-x' id="times"></i>
+                <i class='bx bx-menu' id="toggler"></i>
+            </div>
+        </nav>
+    </section>
+
+    <!-- main section of the webpage -->
+    <main class="web-content">
+        <div class="text">
+            <h1>The Best Shopping Website <br> in the World</h1>
+            <div class="shopnow"><a href="#">Shop Now</a></div>
+        </div>
+        <div class="img"><img src="shoppng.jpg" alt=""shop bag></div>
+    </main>
+
+    <script>
+        let navbar = document.querySelector('.nav-links'), 
+        toggler = document.querySelector('#toggler'),
+        cancel = document.querySelector('#times');
+
+        toggler.addEventListener('click', () => {
+            navbar.classList.add('active');
+            times.classList.add('show');
+            toggler.classList.add('hide');
+        })
+        cancel.addEventListener('click', () => {
+            navbar.classList.remove('active');
+            times.classList.remove('show');
+            toggler.classList.remove('hide');
+        })
+
+    </script>
+</body>
+</html>
